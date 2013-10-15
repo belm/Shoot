@@ -30,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // run
     director->runWithScene(scene);
     
-    // test
+    // test2
 
     return true;
 }
