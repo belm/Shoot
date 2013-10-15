@@ -34,6 +34,8 @@ bool HelloWorld::init()
     auto logoSprite = Sprite::create("BurstAircraftLogo-hd.png");
     logoSprite->setPosition(centerOf(startSprite));
     startSprite->addChild(logoSprite);
+    
+    //test 
     return true;
 }
 
