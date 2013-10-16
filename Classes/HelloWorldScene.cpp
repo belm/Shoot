@@ -1,6 +1,15 @@
 #include "HelloWorldScene.h"
 #include "VisibleRect.h"
+#include "MainLayer.h"
 USING_NS_CC;
+
+HelloWorld::HelloWorld()
+{
+}
+
+HelloWorld::~HelloWorld()
+{
+}
 
 Scene* HelloWorld::createScene()
 {
@@ -34,11 +43,13 @@ bool HelloWorld::init()
     auto logoSprite = Sprite::create("BurstAircraftLogo-hd.png");
     logoSprite->setPosition(centerOf(startSprite));
     startSprite->addChild(logoSprite);
-    
-    //test 
     return true;
 }
 
+void HelloWorld::onEnter()
+{
+    Director::getInstance()->replaceScene(MainLayer::scene());
+}
 
 void HelloWorld::menuCloseCallback(Object* pSender)
 {

@@ -63,6 +63,10 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		AB5E4656180E2601000FAF81 /* MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5E4654180E2601000FAF81 /* MainLayer.cpp */; };
+		AB5E4657180E2601000FAF81 /* MainLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5E4654180E2601000FAF81 /* MainLayer.cpp */; };
+		AB5E4660180E2861000FAF81 /* BackgroudLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5E465E180E2861000FAF81 /* BackgroudLayer.cpp */; };
+		AB5E4661180E2861000FAF81 /* BackgroudLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB5E465E180E2861000FAF81 /* BackgroudLayer.cpp */; };
 		AB9E58A2180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9E587D180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png */; };
 		AB9E58A3180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9E587D180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png */; };
 		AB9E58A4180D1CDD00192A20 /* BurstAircraftAircraftSmall2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9E587E180D1CDD00192A20 /* BurstAircraftAircraftSmall2@2x.png */; };
@@ -364,6 +368,10 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		AB5E4654180E2601000FAF81 /* MainLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainLayer.cpp; path = ../Classes/MainLayer.cpp; sourceTree = "<group>"; };
+		AB5E4655180E2601000FAF81 /* MainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainLayer.h; path = ../Classes/MainLayer.h; sourceTree = "<group>"; };
+		AB5E465E180E2861000FAF81 /* BackgroudLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BackgroudLayer.cpp; path = ../Classes/BackgroudLayer.cpp; sourceTree = "<group>"; };
+		AB5E465F180E2861000FAF81 /* BackgroudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroudLayer.h; path = ../Classes/BackgroudLayer.h; sourceTree = "<group>"; };
 		AB9E587D180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BurstAircraftAircraftBig@2x.png"; sourceTree = "<group>"; };
 		AB9E587E180D1CDD00192A20 /* BurstAircraftAircraftSmall2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BurstAircraftAircraftSmall2@2x.png"; sourceTree = "<group>"; };
 		AB9E587F180D1CDD00192A20 /* BurstAircraftAvatarMask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BurstAircraftAvatarMask@2x.png"; sourceTree = "<group>"; };
@@ -653,6 +661,10 @@
 		AB9E58F7180D24D800192A20 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				AB5E4654180E2601000FAF81 /* MainLayer.cpp */,
+				AB5E4655180E2601000FAF81 /* MainLayer.h */,
+				AB5E465E180E2861000FAF81 /* BackgroudLayer.cpp */,
+				AB5E465F180E2861000FAF81 /* BackgroudLayer.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -971,7 +983,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5E4656180E2601000FAF81 /* MainLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				AB5E4660180E2861000FAF81 /* BackgroudLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				AB9E58F5180D21D800192A20 /* VisibleRect.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -986,7 +1000,9 @@
 			files = (
 				AB9E58F6180D21D800192A20 /* VisibleRect.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
+				AB5E4657180E2601000FAF81 /* MainLayer.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				AB5E4661180E2861000FAF81 /* BackgroudLayer.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
