@@ -128,6 +128,7 @@ void BackgroudLayer::enemy(float dt)
     int randNum = rand()%4+1;
     String *str = String::createWithFormat("enemy%d_fly_1.png",randNum);
     auto sprite= Sprite::createWithSpriteFrameName(str->getCString());
+    sprite->setTag(randNum);
     Size size = sprite->getContentSize();
     int randPos = rand()%(int)(VisibleRect::rightTop().x)+1;
     if (randPos < size.width/2) {
@@ -178,7 +179,19 @@ void BackgroudLayer::update(float delta)
                 bullet->removeFromParent();
                 
                 enemyArray->removeObject(enemy);
-                enemy->removeFromParent();
+                if (enemy->getTag() <= 3) {
+                    Array *tmp = Array::create();
+                    for (int i=1;i<=4;i++) {
+                        String *str = String::createWithFormat("enemy%d_blowup_%d.png",enemy->getTag(),i);
+                        SpriteFrame *frame = SpriteFrameCache::getInstance()->getSpriteFrameByName(str->getCString());
+                        tmp->addObject(frame);
+                    }
+                    Animation *animation = Animation::createWithSpriteFrames(tmp,0.1f);
+                    RemoveSelf *remove = RemoveSelf::create();
+                    enemy->runAction(Sequence::create(Animate::create(animation),remove,NULL));
+                }else{
+                    enemy->removeFromParent();
+                }
                 break;
             }
         }
