@@ -37,6 +37,7 @@ void BackgroudLayer::onEnter()
 {
     Layer::onEnter();
     scheduleUpdate();
+    
     // Register Touch Event
     auto listener = EventListenerTouch::create(Touch::DispatchMode::ONE_BY_ONE);
     listener->setSwallowTouches(true);
@@ -61,6 +62,9 @@ void BackgroudLayer::onEnter()
     hero->setPosition(Point(VisibleRect::bottom().x, VisibleRect::bottom().y+hero->getContentSize().height/2));
     this->addChild(hero);
     
+    ParticleSystemQuad *hero_fire = ParticleSystemQuad::create("hero_fire.plist");
+    hero_fire->setPosition(Point(hero->getContentSize().width/2,0));
+    hero->addChild(hero_fire);
     
     // Make hero touchable
     auto listener1 = EventListenerTouch::create(Touch::DispatchMode::ONE_BY_ONE);
@@ -99,6 +103,10 @@ void BackgroudLayer::onEnter()
     
     schedule(schedule_selector(BackgroudLayer::enemy), 2.0f);//产生敌机
     schedule(schedule_selector(BackgroudLayer::enemyMove), 1/60.f);//更新敌机
+    
+    ParticleSystemQuad *system = ParticleSystemQuad::create("animate1.plist");
+    system->setPosition(VisibleRect::bottom());
+    this->addChild(system);
 }
 
 void BackgroudLayer::move(float dt)

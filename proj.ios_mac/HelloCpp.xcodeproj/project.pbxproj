@@ -143,6 +143,10 @@
 		AB9E58EB180D1CDD00192A20 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AB9E58A1180D1CDD00192A20 /* fonts */; };
 		AB9E58F5180D21D800192A20 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB9E58F3180D21D800192A20 /* VisibleRect.cpp */; };
 		AB9E58F6180D21D800192A20 /* VisibleRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB9E58F3180D21D800192A20 /* VisibleRect.cpp */; };
+		ABAF15FE1811170D00026AD3 /* animate1.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABAF15FD1811170D00026AD3 /* animate1.plist */; };
+		ABAF15FF1811170D00026AD3 /* animate1.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABAF15FD1811170D00026AD3 /* animate1.plist */; };
+		ABAF160A18111F4200026AD3 /* hero_fire.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABAF160918111F4100026AD3 /* hero_fire.plist */; };
+		ABAF160B18111F4200026AD3 /* hero_fire.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABAF160918111F4100026AD3 /* hero_fire.plist */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -412,6 +416,8 @@
 		AB9E58F3180D21D800192A20 /* VisibleRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VisibleRect.cpp; path = ../Classes/VisibleRect.cpp; sourceTree = "<group>"; };
 		AB9E58F4180D21D800192A20 /* VisibleRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VisibleRect.h; path = ../Classes/VisibleRect.h; sourceTree = "<group>"; };
 		AB9E58F9180D24FB00192A20 /* Consts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Consts.h; path = ../Classes/Consts.h; sourceTree = "<group>"; };
+		ABAF15FD1811170D00026AD3 /* animate1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = animate1.plist; sourceTree = "<group>"; };
+		ABAF160918111F4100026AD3 /* hero_fire.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hero_fire.plist; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -613,6 +619,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				ABAF160918111F4100026AD3 /* hero_fire.plist */,
+				ABAF15FD1811170D00026AD3 /* animate1.plist */,
 				AB9E587D180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png */,
 				AB9E587E180D1CDD00192A20 /* BurstAircraftAircraftSmall2@2x.png */,
 				AB9E587F180D1CDD00192A20 /* BurstAircraftAvatarMask@2x.png */,
@@ -881,6 +889,7 @@
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				AB9E58AE180D1CDD00192A20 /* BurstAircraftButtonBule@2x.png in Resources */,
 				AB9E58D4180D1CDD00192A20 /* enemy3_down.mp3 in Resources */,
+				ABAF160A18111F4200026AD3 /* hero_fire.plist in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				AB9E58E0180D1CDD00192A20 /* game_over.mp3 in Resources */,
@@ -901,6 +910,7 @@
 				AB9E58C0180D1CDD00192A20 /* BurstAircraftLogo.png in Resources */,
 				AB9E58E6180D1CDD00192A20 /* gameArts.plist in Resources */,
 				AB9E58EA180D1CDD00192A20 /* fonts in Resources */,
+				ABAF15FE1811170D00026AD3 /* animate1.plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				AB9E58B2180D1CDD00192A20 /* BurstAircraftButtonBuleSmall@2x.png in Resources */,
 				AB9E58D2180D1CDD00192A20 /* enemy2_out.mp3 in Resources */,
@@ -952,6 +962,7 @@
 				AB9E58BB180D1CDD00192A20 /* BurstAircraftComplete@2x.png in Resources */,
 				AB9E58A3180D1CDD00192A20 /* BurstAircraftAircraftBig@2x.png in Resources */,
 				AB9E58C9180D1CDD00192A20 /* BurstAircraftStartHL@2x.png in Resources */,
+				ABAF15FF1811170D00026AD3 /* animate1.plist in Resources */,
 				AB9E58C7180D1CDD00192A20 /* BurstAircraftStart@2x.png in Resources */,
 				AB9E58CB180D1CDD00192A20 /* BurstAircraftTopScores@2x.png in Resources */,
 				AB9E58EB180D1CDD00192A20 /* fonts in Resources */,
@@ -961,6 +972,7 @@
 				AB9E58E7180D1CDD00192A20 /* gameArts.plist in Resources */,
 				AB9E58D9180D1CDD00192A20 /* enemy4_out.mp3 in Resources */,
 				AB9E58D1180D1CDD00192A20 /* enemy2_down.mp3 in Resources */,
+				ABAF160B18111F4200026AD3 /* hero_fire.plist in Resources */,
 				AB9E58D3180D1CDD00192A20 /* enemy2_out.mp3 in Resources */,
 				AB9E58E5180D1CDD00192A20 /* gameArts-hd.png in Resources */,
 				5087E75417EB910900C73F5D /* CloseSelected.png in Resources */,
