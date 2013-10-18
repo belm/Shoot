@@ -43,7 +43,6 @@ void BackgroudLayer::onEnter()
     listener->onTouchBegan = CC_CALLBACK_2(BackgroudLayer::onTouchBegan, this);
     listener->onTouchMoved = CC_CALLBACK_2(BackgroudLayer::onTouchMoved, this);
     listener->onTouchEnded = CC_CALLBACK_2(BackgroudLayer::onTouchEnded, this);
-    
     EventDispatcher::getInstance()->addEventListenerWithSceneGraphPriority(listener, this);
     
     startSprite1 = Sprite::createWithSpriteFrameName("background_2.png");
@@ -61,6 +60,39 @@ void BackgroudLayer::onEnter()
     hero = Sprite::createWithSpriteFrameName("hero_fly_1.png");
     hero->setPosition(Point(VisibleRect::bottom().x, VisibleRect::bottom().y+hero->getContentSize().height/2));
     this->addChild(hero);
+    
+    
+    // Make hero touchable
+    auto listener1 = EventListenerTouch::create(Touch::DispatchMode::ONE_BY_ONE);
+    listener1->setSwallowTouches(true);
+    
+    listener1->onTouchBegan = [](Touch* touch, Event* event){
+        auto target = static_cast<Sprite*>(event->getCurrentTarget());
+        
+        Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+        Size s = target->getContentSize();
+        Rect rect = Rect(0, 0, s.width, s.height);
+        
+        if (rect.containsPoint(locationInNode))
+        {
+            log("sprite began... x = %f, y = %f", locationInNode.x, locationInNode.y);
+            target->setOpacity(180);
+            return true;
+        }
+        return false;
+    };
+    
+    listener1->onTouchMoved = [](Touch* touch, Event* event){
+        auto target = static_cast<Sprite*>(event->getCurrentTarget());
+        target->setPosition(target->getPosition() + touch->getDelta());
+    };
+    
+    listener1->onTouchEnded = [=](Touch* touch, Event* event){
+        auto target = static_cast<Sprite*>(event->getCurrentTarget());
+        log("sprite onTouchesEnded.. ");
+        target->setOpacity(255);
+    };
+    EventDispatcher::getInstance()->addEventListenerWithSceneGraphPriority(listener1, hero);
     
     schedule(schedule_selector(BackgroudLayer::bullet), 0.1f);//产生子弹
     schedule(schedule_selector(BackgroudLayer::bulletMove), 1/60.f);//更新子弹
