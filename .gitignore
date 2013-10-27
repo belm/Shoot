@@ -13,3 +13,5 @@
 *.a
 
 /proj.ios_mac/HelloCpp.xcodeproj/project.xcworkspace/xcuserdata/belm.xcuserdatad/UserInterfaceState.xcuserstate
+
+/.DS_Store
